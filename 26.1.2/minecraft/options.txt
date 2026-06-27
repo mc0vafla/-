@@ -63,7 +63,7 @@ damageTiltStrength:1.0
 highContrast:false
 highContrastBlockOutline:false
 narratorHotkey:true
-resourcePacks:["vanilla","file/Faithful 32x - 26.2.zip","file/cubic-sun-moon-v1.8.5.zip","file/KonciPET UI 2.2.1.zip"]
+resourcePacks:["vanilla","file/Faithful 32x - 26.2.zip","file/§8gray §6lava §f§l[32x] §f- §e1.21+§0.zip","file/cubic-sun-moon-v1.8.5.zip","file/KonciPET UI 2.2.1.zip"]
 incompatibleResourcePacks:["file/Faithful 32x - 26.2.zip","file/§8gray §6lava §f§l[32x] §f- §e1.21+§0.zip","file/cubic-sun-moon-v1.8.5.zip","file/KonciPET UI 2.2.1.zip"]
 lastServer:
 lang:lol_us
@@ -194,7 +194,7 @@ key_simply-no-shading.key.toggleCloudShading:key.keyboard.unknown
 key_simply-no-shading.key.toggleEntityShading:key.keyboard.unknown
 key_lambdynlights.key.toggle_fps_dynamic_lighting:key.keyboard.unknown
 key_key.omnilook.toggle:key.keyboard.b
-soundCategory_master:0.15857391694260484
+soundCategory_master:0.10264900662251655
 soundCategory_music:0.0
 soundCategory_record:1.0
 soundCategory_weather:1.0

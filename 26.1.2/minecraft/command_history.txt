@@ -21,3 +21,19 @@
 /fl
 /boop pxnkyvanes
 /fl
+/swaplobby 1
+/fl
+/boop ryusei1_
+/r
+/boop ryusei1_
+/r
+/fl
+/r
+/msg Ryusei1_ hmmm
+/r
+/msg Ryusei1_ right
+/r
+/boop crywolfix
+/r
+/boop pxnkyvanes
+/r
