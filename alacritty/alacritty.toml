@@ -1,0 +1,49 @@
+[window.padding]
+x = 12
+y = 12
+
+[font]
+size = 12.0
+
+[font.normal]
+family = "DepartureMono Nerd Font"
+style = "Regular"
+
+[font.bold]
+family = "DepartureMono Nerd Font"
+style = "Bold"
+
+[font.italic]
+family = "DepartureMono Nerd Font"
+style = "Italic"
+
+[colors.primary]
+background = "#2D2A2E"
+foreground = "#F1EBE0"
+
+[colors.cursor]
+text = "CellBackground"
+cursor = "#F1EBE0"
+
+[colors.normal]
+black   = "#2D2A2E"
+red     = "#E06C75"
+green   = "#98C379"
+yellow  = "#D19A66"
+blue    = "#61AFEF"
+magenta = "#C678DD"
+cyan    = "#56B6C2"
+white   = "#ABB2BF"
+
+[colors.bright]
+black   = "#5C5855"
+red     = "#FF7A85"
+green   = "#A5D685"
+yellow  = "#E5C07B"
+blue    = "#76C0FF"
+magenta = "#D68DFF"
+cyan    = "#6BCED8"
+white   = "#DCDFE4"
+
+[terminal]
+shell = { program = "/usr/local/bin/fish", args = ["-l"] }

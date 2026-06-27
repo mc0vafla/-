@@ -1,0 +1,21 @@
+2026/06/27-09:21:31.904 575 Reusing MANIFEST /home/helminth/.config/chromium/Default/IndexedDB/https_www.youtube.com_0.indexeddb.leveldb/MANIFEST-000001
+2026/06/27-09:21:31.904 575 Recovering log #29
+2026/06/27-09:21:31.909 575 Reusing old log /home/helminth/.config/chromium/Default/IndexedDB/https_www.youtube.com_0.indexeddb.leveldb/000029.log 
+2026/06/27-09:43:05.185 575 Level-0 table #35: started
+2026/06/27-09:43:05.194 575 Level-0 table #35: 1650072 bytes OK
+2026/06/27-09:43:05.196 575 Delete type=0 #29
+2026/06/27-09:43:23.537 575 Compacting 1@1 + 1@2 files
+2026/06/27-09:43:23.542 575 Generated table #36@1: 394 keys, 71782 bytes
+2026/06/27-09:43:23.542 575 Compacted 1@1 + 1@2 files => 71782 bytes
+2026/06/27-09:43:23.543 575 compacted to: files[ 0 0 1 0 0 0 0 ]
+2026/06/27-09:43:23.543 575 Delete type=2 #32
+2026/06/27-09:43:23.543 575 Delete type=2 #35
+2026/06/27-10:03:26.828 575 Level-0 table #38: started
+2026/06/27-10:03:26.841 575 Level-0 table #38: 1410310 bytes OK
+2026/06/27-10:03:26.842 575 Delete type=0 #34
+2026/06/27-10:03:48.355 574 Compacting 1@1 + 1@2 files
+2026/06/27-10:03:48.364 574 Generated table #39@1: 419 keys, 102373 bytes
+2026/06/27-10:03:48.364 574 Compacted 1@1 + 1@2 files => 102373 bytes
+2026/06/27-10:03:48.365 574 compacted to: files[ 0 0 1 0 0 0 0 ]
+2026/06/27-10:03:48.365 574 Delete type=2 #36
+2026/06/27-10:03:48.365 574 Delete type=2 #38

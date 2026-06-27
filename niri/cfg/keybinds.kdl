@@ -1,0 +1,80 @@
+binds {
+
+    // ─── Applications ───
+    Mod+ESCAPE                          { spawn-sh "nautilus"; }
+    Alt+ESCAPE                          { spawn-sh "flatpak run org.prismlauncher.PrismLauncher"; }
+    Mod+P                               { spawn "sh" "-c" "flatpak run com.valvesoftware.Steam"; }
+    Mod+Return                          { spawn "alacritty"; }
+    Mod+Shift+Return                    { spawn "alacritty"; }
+    Mod+V                               { spawn-sh "noctalia msg panel-open launcher"; }
+    Mod+X                               { spawn-sh "chromium"; }
+    Mod+L                               { spawn-sh "noctalia msg session lock"; }
+    Mod+E                               { spawn-sh "noctalia msg panel-open control-center"; }
+    Mod+Shift+E                         { spawn-sh "noctalia msg settings-toggle"; }
+    Mod+B                               { spawn-sh "alacritty -e fish -c b"; }
+    
+    // ─── Window Movement and Focus ───
+    Mod+Q                               { close-window; }
+    Mod+A                               { focus-column-left; }
+    Mod+D                               { focus-column-right; }
+    Mod+Shift+W                         { focus-window-up; }
+    Mod+Shift+S                         { focus-window-down; }
+    Mod+Shift+CTRL+W                    { move-window-up; }
+    Mod+Shift+CTRL+S                    { move-window-down; }
+    Mod+CTRL+A                          { move-column-left; }
+    Mod+CTRL+D                          { move-column-right; }
+    Mod+1                               { focus-monitor-left; }
+    Mod+2                               { focus-monitor-right; }
+    Mod+Ctrl+1                          { move-column-to-monitor-left; }
+    Mod+Ctrl+2                          { move-column-to-monitor-right; }
+    Mod+Shift+A                         { consume-or-expel-window-left; }
+    Mod+Shift+D                         { consume-or-expel-window-right; }
+    Mod+Shift+WheelScrollDown           cooldown-ms=150 { focus-workspace-down; }
+    Mod+Shift+WheelScrollUp             cooldown-ms=150 { focus-workspace-up; }
+    Mod+Shift+CTRL+WheelScrollDown      cooldown-ms=150 { move-column-to-workspace-down; }
+    Mod+Shift+CTRL+WheelScrollUp        cooldown-ms=150 { move-column-to-workspace-up; }
+    Mod+CTRL+WheelScrollRight           { focus-column-right; }
+    Mod+CTRL+WheelScrollLeft            { focus-column-left; }
+    Mod+WheelScrollRight                { move-column-right; }
+    Mod+WheelScrollLeft           			{ move-column-left; }
+    Mod+WheelScrollDown                 { focus-column-right; }
+    Mod+WheelScrollUp                   { focus-column-left; }
+    Mod+CTRL+WheelScrollDown            { move-column-right; }
+    Mod+CTRL+WheelScrollUp              { move-column-left; }
+    Mod+W                               { focus-workspace-up; }
+    Mod+S                               { focus-workspace-down; }
+    Mod+CTRL+S                          { move-column-to-workspace-down; }
+    Mod+CTRL+W                          { move-column-to-workspace-up; }
+
+    // ─── Layout Controls ───
+    Alt+f                               { maximize-column; }
+    ALT+Backslash                       { center-column; }
+    Alt+Space                           { center-column; }
+    Alt+q                               { set-column-width "-10%"; }
+    Alt+w                               { set-column-width "+10%"; }
+
+    // ─── Modes ───
+    Mod+Z                               { toggle-window-floating; }
+    Mod+Shift+Z                         { switch-focus-between-floating-and-tiling; }
+    Mod+F                               { fullscreen-window; }
+
+    // ─── Screenshots and colorpicker ───
+    Mod+0                               { screenshot show-pointer=false; }
+    ALT+1                               { screenshot show-pointer=false; }
+    ALT+2                               { screenshot-screen show-pointer=false; }        
+    ALT+3                               { screenshot-window show-pointer=false; }
+    ALT+4                               { spawn "sh" "-c" "color=$(hyprpicker) && wl-copy $color && notify-send 'Color Picked' $color"; }
+
+    Mod+Shift+ESCAPE                    { quit; }
+    Mod+TAB                             repeat=false { toggle-overview; }
+    Ctrl+Alt+P                          { spawn "fish" "-c" "321"; }
+    Ctrl+Alt+O                          { spawn "fish" "-c" "123"; }
+
+  	Mod+Space                           { switch-layout "next"; }
+
+    // ─── Additionals ───
+    Alt+S                               { spawn-sh "wpctl set-mute @DEFAULT_AUDIO_SINK@ toggle"; }
+    Alt+E                               { switch-preset-column-width; }
+    Mod+T                               { spawn-sh "noctalia msg panel-open wallpaper"; }
+    Alt+A                               { focus-workspace 100; }
+}

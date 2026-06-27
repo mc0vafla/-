@@ -1,0 +1,176 @@
+###############################################################
+# This configuration file lets you
+# - define new commands
+# - change the shortcut or triggering keys of built-in verbs
+# - change the colors
+# - set default values for flags
+# - set special behaviors on specific paths
+# - and more...
+#
+# Configuration documentation is available at
+#     https://dystroy.org/broot
+#
+# This file's format is Hjson ( https://hjson.github.io/ ). Some
+# properties are commented out. To enable them, remove the `#`.
+#
+###############################################################
+
+###############################################################
+# Default flags
+#
+# default_flags:
+
+###############################################################
+# Terminal's title
+#
+terminal_title: "[broot] {git-name}"
+
+###############################################################
+# Date/Time format
+#
+date_time_format: %Y/%m/%d %R
+
+###############################################################
+# Modal mode
+#
+# modal: true
+# initial_mode: command
+
+###############################################################
+# Whether to mark the selected line with a triangle
+#
+show_selection_mark: true
+
+###############################################################
+# Column order
+#
+# cols_order: [ ... ]
+
+###############################################################
+# True Colors
+#
+# true_colors: false
+
+###############################################################
+# Icons
+icon_theme: nerdfonts
+
+###############################################################
+# Special paths
+#
+special_paths: {
+    "~/.var" : {
+      list: "always"
+      sum: "never"
+    }
+    "/media" : {
+        list: "never"
+        sum: "never"
+    }
+    "~/.config": { "show": "always" }
+    "trav": {
+        show: always
+        list: "always",
+        sum: "never"
+    }
+}
+
+###############################################################
+# Quit on last cancel
+# 
+# quit_on_last_cancel: true
+
+###############################################################
+# Search modes
+#
+# search_modes: {
+#     <empty>: fuzzy name
+#     /: regex name
+# }
+
+###############################################################
+# File Extension Colors
+#
+# ext_colors: { ... }
+
+###############################################################
+# Max file size for content search
+content_search_max_file_size: 10MB
+
+###############################################################
+# Max Panels Count
+# max_panels_count: 2
+
+###############################################################
+# Update work dir
+#
+update_work_dir: true
+
+###############################################################
+# Kitty Keyboard extension
+enable_kitty_keyboard: false
+
+###############################################################
+# lines around matching line in filtered preview
+lines_before_match_in_preview: 1
+lines_after_match_in_preview: 1
+
+###############################################################
+# transformations before preview
+preview_transformers: [ ]
+
+###############################################################
+# Цветовая схема (Палитра Murata / Логотип)
+#
+skin: {
+    # Принудительно красим папки и дерево в терракотово-красный
+    directory: rgb(208, 103, 100) bold
+    folder: rgb(208, 103, 100) bold
+    tree: rgb(130, 150, 152)
+
+    # Обычные файлы — в бежевый/кремовый (#EBE1CE)
+    file: rgb(235, 225, 206)
+    
+    # Выбранная строка
+    selected_line: rgb(235, 225, 206) rgb(45, 42, 46)
+    
+    # Даты и служебная информация — в приглушенный серо-голубой
+    dates: rgb(130, 150, 152)
+    permissions: rgb(130, 150, 152)
+    
+    # Поисковый инпут и совпадения
+    input: rgb(235, 225, 206)
+    char_match: rgb(208, 103, 100) bold
+}
+
+###############################################################
+# Кастомное поведение клавиш (Горячие клавиши)
+#
+verbs: [
+    {
+        invocation: edit
+        key: enter
+        shortcut: e
+        apply_to: "file"
+        execution: "nvim {file}"
+        leave_broot: false
+    }
+    {
+        name: "enter_dir"
+        key: enter
+        mime_filter: "directory"
+        internal: "focus"
+    }
+    {
+        key: ctrl-x
+        apply_to: "file"
+        internal: "open_stay"
+    }
+]
+
+###############################################################
+# Imports
+#
+imports: [
+    verbs.hjson
+]
