@@ -1,0 +1,18 @@
+filename = 'KonciPET UI 2.2.1.zip'
+name = 'KonciPET UI'
+side = 'client'
+x-prismlauncher-dependencies = []
+x-prismlauncher-loaders = []
+x-prismlauncher-mc-versions = [ '1.21.6', '1.21.7', '1.21.8' ]
+x-prismlauncher-release-type = 'release'
+x-prismlauncher-version-number = '2.2.1'
+
+[download]
+hash = '03d4cf40cb3d7d81eac70e1b54f5d5a532bf9c33763e2f9142c4eb364857b74972132c4d402cdaac6542b124bb0fcbfb90006cb5b19a2d3ccd096ee38324defe'
+hash-format = 'sha512'
+mode = 'url'
+url = 'https://cdn.modrinth.com/data/4XOSYHAs/versions/MvDaYTUE/KonciPET UI 2.2.1.zip'
+
+[update.modrinth]
+mod-id = '4XOSYHAs'
+version = 'MvDaYTUE'

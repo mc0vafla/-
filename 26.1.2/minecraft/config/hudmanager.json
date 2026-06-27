@@ -1,0 +1,86 @@
+{
+  "ActionBar": {
+    "Display": true,
+    "Resizer": 0.8,
+    "Opacity": 0.8,
+    "OffsetX": 0.0,
+    "OffsetY": 0.0
+  },
+  "BossBar": {
+    "Display": false,
+    "Resizer": 1.0,
+    "Opacity": 1.0,
+    "OffsetX": 0.0,
+    "OffsetY": 0.0
+  },
+  "ClosedCaption": {
+    "Display": true,
+    "Resizer": 0.8,
+    "Opacity": 0.8,
+    "OffsetX": 0.0,
+    "OffsetY": 0.0
+  },
+  "Crosshair": {
+    "Display": true,
+    "Resizer": 0.8,
+    "Opacity": 0.8,
+    "OffsetX": 0.0,
+    "OffsetY": 0.0
+  },
+  "DebugScreen": {
+    "Display": true,
+    "Resizer": 0.8,
+    "Opacity": 0.8,
+    "OffsetX": 0.0,
+    "OffsetY": 0.0
+  },
+  "HotbarGroup": {
+    "Display": true,
+    "Resizer": 0.8,
+    "Opacity": 0.8,
+    "OffsetX": 0.0,
+    "OffsetY": 0.0
+  },
+  "PlayerList": {
+    "Display": true,
+    "Resizer": 1.0,
+    "Opacity": 0.8,
+    "OffsetX": 0.0,
+    "OffsetY": 0.0
+  },
+  "Scoreboard": {
+    "Display": true,
+    "Resizer": 0.8,
+    "Opacity": 0.8,
+    "OffsetX": 0.0,
+    "OffsetY": 0.0
+  },
+  "ScreenTitle": {
+    "Display": true,
+    "Resizer": 0.8,
+    "Opacity": 0.8,
+    "OffsetX": 0.0,
+    "OffsetY": 0.0
+  },
+  "StatusEffect": {
+    "Display": true,
+    "Resizer": 0.8,
+    "Opacity": 0.8,
+    "OffsetX": 0.0,
+    "OffsetY": 0.0
+  },
+  "ToastMessage": {
+    "Display": true,
+    "Resizer": 0.8,
+    "Opacity": 0.8,
+    "OffsetX": 0.0,
+    "OffsetY": 0.0
+  },
+  "Tooltip": {
+    "Display": true,
+    "Resizer": 0.8,
+    "Opacity": 0.8,
+    "OffsetX": 0.0,
+    "OffsetY": 0.0
+  }
+}

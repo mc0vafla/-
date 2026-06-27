@@ -1,0 +1,23 @@
+/ffl
+/fl
+/msg PxnkyVanes huh
+/boop technomancer55
+/fl
+/boop pxnkyvanes
+/swaplobby 1
+/msg FurryFemboyCat fine
+/msg PxnkyVanes
+/fl
+/guild join hexovia
+/r
+/chat a
+/profile
+/rankcolor
+/guild top
+/fl
+/guild chat
+/r
+/swaplobby 2
+/fl
+/boop pxnkyvanes
+/fl

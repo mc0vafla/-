@@ -1,0 +1,10 @@
+{
+  "pingColorGood": "#1EFF00",
+  "pingColorOk": "#FFF100",
+  "pingColorBad": "#FF9500",
+  "pingColorTerrible": "#FF3B3B",
+  "pingColorUnknown": "#555555",
+  "showMs": true,
+  "showNametagPing": false,
+  "textShadow": true
+}

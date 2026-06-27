@@ -1,0 +1,18 @@
+filename = 'Carbon-0.1.0-26.1.2-fabric.jar'
+name = 'Carbonfast'
+side = 'client'
+x-prismlauncher-dependencies = []
+x-prismlauncher-loaders = [ 'fabric' ]
+x-prismlauncher-mc-versions = [ '26.1.2' ]
+x-prismlauncher-release-type = 'release'
+x-prismlauncher-version-number = '0.1.0-26.1.2'
+
+[download]
+hash = '48bfc6aa7758ee91e9ef92c9b80ee1e39f65a21f18119268ea6e91426171a7a13292a68cc593debb07d55f10046101fa5ed6593d96f91c86a2147c7f78fa1e71'
+hash-format = 'sha512'
+mode = 'url'
+url = 'https://cdn.modrinth.com/data/SGE5NFob/versions/KQcvZtQX/Carbon-0.1.0-26.1.2-fabric.jar'
+
+[update.modrinth]
+mod-id = 'SGE5NFob'
+version = 'KQcvZtQX'
