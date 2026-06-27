@@ -15,8 +15,8 @@ image/gif=com.interversehq.qView.desktop
 image/webp=com.interversehq.qView.desktop
 image/bmp=com.interversehq.qView.desktop
 image/svg+xml=com.interversehq.qView.desktop
-inode/directory=org.gnome.Nautilus.desktop
-x-scheme-handler/file=org.gnome.Nautilus.desktop
+inode/directory=alacritty.desktop
+x-scheme-handler/file=alacritty.desktop
 
 [Added Associations]
 x-scheme-handler/http=firefox.desktop;
@@ -35,5 +35,5 @@ image/gif=com.interversehq.qView.desktop;
 image/webp=com.interversehq.qView.desktop;
 image/bmp=com.interversehq.qView.desktop;
 image/svg+xml=com.interversehq.qView.desktop;
-inode/directory=org.gnome.Nautilus.desktop;
-x-scheme-handler/file=org.gnome.Nautilus.desktop;
+inode/directory=alacritty.desktop;
+x-scheme-handler/file=alacritty.desktop;

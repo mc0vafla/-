@@ -1,7 +1,7 @@
 binds {
 
     // ─── Applications ───
-    Mod+ESCAPE                          { spawn-sh "nautilus"; }
+    Mod+ESCAPE                          { spawn-sh "alacritty -e fish -c q"; }
     Alt+ESCAPE                          { spawn-sh "flatpak run org.prismlauncher.PrismLauncher"; }
     Mod+P                               { spawn-sh "flatpak run com.valvesoftware.Steam"; }
     Mod+Return                          { spawn "alacritty"; }
