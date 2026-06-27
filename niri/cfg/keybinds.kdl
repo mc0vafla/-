@@ -3,11 +3,12 @@ binds {
     // ─── Applications ───
     Mod+ESCAPE                          { spawn-sh "nautilus"; }
     Alt+ESCAPE                          { spawn-sh "flatpak run org.prismlauncher.PrismLauncher"; }
-    Mod+P                               { spawn "sh" "-c" "flatpak run com.valvesoftware.Steam"; }
+    Mod+P                               { spawn-sh "flatpak run com.valvesoftware.Steam"; }
     Mod+Return                          { spawn "alacritty"; }
     Mod+Shift+Return                    { spawn "alacritty"; }
     Mod+V                               { spawn-sh "noctalia msg panel-open launcher"; }
     Mod+X                               { spawn-sh "chromium"; }
+    Mod+C                               { spawn-sh "flatpak run app.zen_browser.zen"; }
     Mod+L                               { spawn-sh "noctalia msg session lock"; }
     Mod+E                               { spawn-sh "noctalia msg panel-open control-center"; }
     Mod+Shift+E                         { spawn-sh "noctalia msg settings-toggle"; }

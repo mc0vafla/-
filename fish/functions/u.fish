@@ -1,3 +1,3 @@
-function u --wraps='doas apk update; doas apk upgrade' --description 'alias u=doas apk update; doas apk upgrade'
-    doas apk update; doas apk upgrade $argv
+function u --wraps='doas apk update; doas apk upgrade; flatpak update' --description 'alias u=doas apk update; doas apk upgrade; flatpak update'
+    doas apk update; doas apk upgrade; flatpak update $argv
 end
