@@ -42,19 +42,18 @@ window-rule {
 }
 window-rule {
     match app-id="chromium"
-    default-column-width { proportion 1.0; }
-    open-on-workspace "if"
+    default-column-width { proportion 0.9; }
     opacity 1.0
 }
 window-rule {
     match app-id="app.zen_browser.zen"
-    default-column-width { proportion 1.0; }
+    default-column-width { proportion 0.9; }
     open-on-workspace "secm"
     opacity 0.95
 }
 window-rule {
     match app-id="spotify"
-    default-column-width { proportion 1.0; }
+    default-column-width { proportion 0.9; }
     open-on-workspace "if"
     opacity 0.9
 }
@@ -77,5 +76,5 @@ window-rule {
 }
 window-rule {
     match app-id="steam"
-    default-column-width { proportion 1.0; }
+    default-column-width { proportion 0.9; }
 }
