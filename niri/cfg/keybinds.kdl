@@ -7,8 +7,8 @@ binds {
     Mod+Return                          { spawn "alacritty"; }
     Mod+Shift+Return                    { spawn "alacritty"; }
     Mod+V                               { spawn-sh "noctalia msg panel-open launcher"; }
-    Mod+X                               { spawn-sh "chromium"; }
-    Mod+C                               { spawn-sh "flatpak run app.zen_browser.zen"; }
+    Mod+C                               { spawn-sh "chromium"; }
+    Mod+X                               { spawn-sh "flatpak run app.zen_browser.zen"; }
     Mod+L                               { spawn-sh "noctalia msg session lock"; }
     Mod+E                               { spawn-sh "noctalia msg panel-open control-center"; }
     Mod+Shift+E                         { spawn-sh "noctalia msg settings-toggle"; }

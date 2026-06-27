@@ -15,8 +15,8 @@ image/gif=com.interversehq.qView.desktop
 image/webp=com.interversehq.qView.desktop
 image/bmp=com.interversehq.qView.desktop
 image/svg+xml=com.interversehq.qView.desktop
-inode/directory=alacritty.desktop
-x-scheme-handler/file=alacritty.desktop
+inode/directory=alacritty-fm.desktop
+x-scheme-handler/file=alacritty-fm.desktop
 
 [Added Associations]
 x-scheme-handler/http=firefox.desktop;
