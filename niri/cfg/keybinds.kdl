@@ -19,6 +19,7 @@ binds {
     Alt+V                               { spawn-sh "noctalia msg dock-toggle"; }
     Alt+C                               { spawn-sh "playerctl play-pause spotify"; }
     Mod+I                               { spawn-sh "alacritty -e fish -c cute"; }
+    Mod+H                               { spawn-sh "flatpak run com.github.PintaProject.Pinta"; }
     
 
     // ─── Window Movement and Focus ───
