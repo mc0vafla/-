@@ -31,7 +31,7 @@ window-rule {
         color "#db7b7b30" 
     }
     focus-ring {
-        width 4
+        width 3
         active-color "#e8a7a170" 
     }
 }
