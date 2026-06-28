@@ -1,3 +1,3 @@
-function d --wraps='rg -.' --description 'alias d=rg -.'
-    rg -. $argv
+function d --wraps=bat --description 'alias d=bat'
+    bat $argv
 end

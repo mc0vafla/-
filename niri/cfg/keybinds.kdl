@@ -82,4 +82,7 @@ binds {
     Alt+A                               { focus-workspace 100; }
     Alt+X                               { spawn-sh "playerctl next"; }
     Alt+Z                               { spawn-sh "playerctl previous"; }
+    Alt+R                               { spawn-sh "showtime"; }
+    Alt+K                               { spawn-sh "playerctl volume 0.1+ spotify"; }
+    Alt+J                               { spawn-sh "playerctl volume 0.1- spotify"; }
 }
