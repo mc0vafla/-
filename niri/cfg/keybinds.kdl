@@ -1,7 +1,7 @@
 binds {
 
     // ─── Applications ───
-    Alt+E                               { spawn-sh "alacritty -e fish -c q"; }
+    Alt+TAB                             { spawn-sh "alacritty -e fish -c q"; }
     Alt+ESCAPE                          { spawn-sh "flatpak run org.prismlauncher.PrismLauncher"; }
     Mod+Shift+O                         { spawn-sh "flatpak run io.github.Faugus.faugus-launcher"; }
     Mod+O                               { spawn-sh "flatpak run com.heroicgameslauncher.hgl"; }
@@ -76,7 +76,7 @@ binds {
     Mod+TAB                             repeat=false { toggle-overview; }
     Ctrl+Alt+P                          { spawn "fish" "-c" "321"; }
     Ctrl+Alt+O                          { spawn "fish" "-c" "123"; }
-
+    Alt+Shift+TAB                       { spawn-sh ""; }
   	Mod+Space                           { switch-layout "next"; }
 
     // ─── Additionals ───
