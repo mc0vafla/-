@@ -188,10 +188,10 @@ end
 
 function fish_right_prompt
     set -l last_status $status
-    set -l blue (set_color blue)
+    set -l pink (set_color FF69B4)
     set -l normal (set_color normal)
     if fish_git_prompt > /dev/null
-        echo -n -s "$blue"(fish_git_prompt)"$normal"
+        echo -n -s "$pink"(fish_git_prompt)"$normal"
     end
 end
 
