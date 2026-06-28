@@ -35,7 +35,6 @@ end
 
 function j
     set container_name "alpine-permanent"
-    
     if not podman ps -a --format "{{.Names}}" | grep -q "^$container_name\$"
         if type -q xhost
             xhost +local: > /dev/null 2>&1
@@ -83,7 +82,6 @@ function j
             -e HOME=$HOME \
             $container_name $package
     else
-        echo "💻 Вход в постоянный контейнер Alpine..."
         if not podman ps --format "{{.Names}}" | grep -q "^$container_name\$"
             podman start $container_name > /dev/null 2>&1
         end
