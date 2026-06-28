@@ -14,6 +14,7 @@ binds {
     Mod+Shift+E                         { spawn-sh "noctalia msg settings-toggle"; }
     Mod+B                               { spawn-sh "alacritty -e fish -c b"; }
     Mod+Shift+P                         { spawn-sh "flatpak run io.github.ebkr.r2modman"; }
+    Alt+C                               { spawn-sh "noctalia msg dock-toggle"; }
     
     // ─── Window Movement and Focus ───
     Mod+Q                               { close-window; }
