@@ -2,6 +2,8 @@ set -gx XDG_DATA_DIRS $XDG_DATA_DIRS /var/lib/flatpak/exports/share/
 set -gx EDITOR nvim
 set -gx LANG en_US.UTF-8
 set -gx LC_ALL en_US.UTF-8
+set -gx XDG_CURRENT_DESKTOP=wlroots
+set -gx XDG_SESSION_TYPE=wayland
 zoxide init fish | source
 set -gx SPICETIFY_INSTALL "/home/helminth/.spicetify"
 fish_add_path $SPICETIFY_INSTALL
