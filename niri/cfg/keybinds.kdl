@@ -76,8 +76,8 @@ binds {
   	Mod+Space                           { switch-layout "next"; }
 
     // ─── Additionals ───
-    Alt+S                               { spawn-sh "wpctl set-mute @DEFAULT_AUDIO_SINK@ toggle"; }
-    Alt+E                               { switch-preset-column-width; }
+    Alt+S                               { spawn-sh "file-roller"; }
+    Alt+E                               { spawn-sh "nautilus"; }
     Alt+D                               { spawn-sh "noctalia msg panel-open wallpaper"; }
     Alt+A                               { focus-workspace 100; }
     Alt+X                               { spawn-sh "playerctl next"; }
