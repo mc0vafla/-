@@ -4,7 +4,7 @@
     "separator": " ── ",
     "color": {
       "keys": "magenta",
-      "title": "cyan",
+      "title": "blue",
       "output": "white"
     },
     "key": {
