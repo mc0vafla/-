@@ -66,7 +66,6 @@ binds {
     ALT+1                               { screenshot show-pointer=false; }
     ALT+2                               { screenshot-screen show-pointer=false; }        
     ALT+3                               { screenshot-window show-pointer=false; }
-    ALT+4                               { spawn "sh" "-c" "color=$(hyprpicker) && wl-copy $color && notify-send 'Color Picked' $color"; }
 
     Mod+Shift+ESCAPE                    { quit; }
     Mod+TAB                             repeat=false { toggle-overview; }
