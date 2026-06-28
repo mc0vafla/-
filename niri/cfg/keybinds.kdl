@@ -17,6 +17,7 @@ binds {
     Alt+V                               { spawn-sh "noctalia msg dock-toggle"; }
     Alt+C                               { spawn-sh "playerctl play-pause spotify"; }
     
+
     // ─── Window Movement and Focus ───
     Mod+Q                               { close-window; }
     Mod+A                               { focus-column-left; }
