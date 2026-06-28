@@ -191,11 +191,9 @@ verbs: [
         execution: ":page_down"
     }
     {
-       key: ctrl-i
-       invocation: "rm"
-       leave_broot: false
+        key: alt-g
+        execution: ":toggle_git_status"
     }
-
 ]
 
 ###############################################################
