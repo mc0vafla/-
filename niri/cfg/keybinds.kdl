@@ -1,7 +1,7 @@
 binds {
 
     // ─── Applications ───
-    Mod+ESCAPE                          { spawn-sh "alacritty -e fish -c q"; }
+    Alt+E                               { spawn-sh "alacritty -e fish -c q"; }
     Alt+ESCAPE                          { spawn-sh "flatpak run org.prismlauncher.PrismLauncher"; }
     Mod+Shift+O                         { spawn-sh "flatpak run io.github.Faugus.faugus-launcher"; }
     Mod+O                               { spawn-sh "flatpak run com.heroicgameslauncher.hgl"; }
@@ -54,23 +54,23 @@ binds {
     Mod+CTRL+S                          { move-column-to-workspace-down; }
     Mod+CTRL+W                          { move-column-to-workspace-up; }
 
-    // ─── Layout Controls ───
+    // ─── :) ───
     Alt+f                               { maximize-column; }
-    ALT+Backslash                       { center-column; }
     Alt+Space                           { center-column; }
     Alt+q                               { set-column-width "-10%"; }
     Alt+w                               { set-column-width "+10%"; }
-
-    // ─── Modes ───
     Mod+Z                               { toggle-window-floating; }
     Mod+Shift+Z                         { switch-focus-between-floating-and-tiling; }
     Mod+F                               { fullscreen-window; }
 
-    // ─── Screenshots and colorpicker ───
+    // ─── Screenshot ───
     Mod+0                               { screenshot show-pointer=false; }
     ALT+1                               { screenshot show-pointer=false; }
     ALT+2                               { screenshot-screen show-pointer=false; }        
     ALT+3                               { screenshot-window show-pointer=false; }
+
+
+    // ─── Things ───
 
     Mod+Shift+ESCAPE                    { quit; }
     Mod+TAB                             repeat=false { toggle-overview; }
@@ -81,7 +81,7 @@ binds {
 
     // ─── Additionals ───
     Alt+S                               { spawn-sh "file-roller"; }
-    Alt+E                               { spawn-sh "nautilus"; }
+    Mod+ESCAPE                          { spawn-sh "nautilus"; }
     Alt+D                               { spawn-sh "noctalia msg panel-open wallpaper"; }
     Alt+A                               { focus-workspace 100; }
     Alt+X                               { spawn-sh "playerctl next spotify"; }
