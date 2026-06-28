@@ -37,3 +37,12 @@
 /r
 /boop pxnkyvanes
 /r
+/fl
+/boop pxnkyvanes
+/swaplobby 1
+/boop ryusei1_
+/r
+/stuck
+/fl
+/stuck
+/hub
