@@ -167,6 +167,14 @@ verbs: [
         apply_to: "file"
         internal: "open_stay"
     }
+    {
+        invocation: terminal
+        key: ctrl-d
+        execution: "$SHELL"
+        set_working_dir: true
+        leave_broot: false
+    }
+
 ]
 
 ###############################################################
