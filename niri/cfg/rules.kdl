@@ -28,11 +28,11 @@ window-rule {
         on
         softness 20
         spread 10
-        color "#db7b7b20" 
+        color "#db7b7b30" 
     }
     focus-ring {
         width 4
-        active-color "#e8a7a1" 
+        active-color "#e8a7a170" 
     }
 }
 window-rule {
