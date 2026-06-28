@@ -58,6 +58,11 @@ icon_theme: nerdfonts
 # Special paths
 #
 special_paths: {
+    "~/.local" : {
+      show: "always"
+      list: "always"
+      sum: "never"
+    }
     "~/.var" : {
       show: "always"
       list: "always"
