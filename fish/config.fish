@@ -53,6 +53,7 @@ end
 
 function j
     set container_name "alpine-permanent"
+    
     if not podman ps -a --format "{{.Names}}" | grep -q "^$container_name\$"
         if type -q xhost
             xhost +local: > /dev/null 2>&1
@@ -64,6 +65,7 @@ function j
             --device /dev/snd \
             -v "$HOME:$HOME" \
             -v "$XDG_RUNTIME_DIR:$XDG_RUNTIME_DIR" \
+            -v "$XDG_RUNTIME_DIR/bus:$XDG_RUNTIME_DIR/bus" \
             -v /var/run/dbus/system_bus_socket:/var/run/dbus/system_bus_socket \
             -w "$PWD" \
             -e LANG=$LANG \
@@ -73,7 +75,6 @@ function j
             -e GSETTINGS_BACKEND=keyfile \
             alpine:latest tail -f /dev/null > /dev/null 2>&1
     end
-
     if test (count $argv) -gt 0
         set package $argv[1]
         
@@ -88,8 +89,8 @@ function j
             if ! grep -q 'testing' /etc/apk/repositories; then
                 echo 'https://dl-cdn.alpinelinux.org/alpine/edge/testing' >> /etc/apk/repositories
             fi && \
-            apk update > /dev/null 2>&1 && \
-            apk add --no-cache hicolor-icon-theme $package > /dev/null 2>&1
+            apk update && \
+            apk add --no-cache hicolor-icon-theme mesa mesa-egl wayland libxkbcommon font-noto glfw $package
         "
         podman exec -it \
             -e LANG=$LANG \
@@ -100,6 +101,7 @@ function j
             -e HOME=$HOME \
             $container_name $package
     else
+        echo "💻 Вход в постоянный контейнер Alpine..."
         if not podman ps --format "{{.Names}}" | grep -q "^$container_name\$"
             podman start $container_name > /dev/null 2>&1
         end
