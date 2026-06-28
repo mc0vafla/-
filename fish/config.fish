@@ -6,6 +6,127 @@ zoxide init fish | source
 set -gx SPICETIFY_INSTALL "/home/helminth/.spicetify"
 fish_add_path $SPICETIFY_INSTALL
 
+function yy
+    set container_name "arch-permanent"
+    if not podman ps -a --format "{{.Names}}" | grep -q "^$container_name\$"
+        echo "❌ container $container_name was not started yet."
+        return 1
+    end
+    if not podman ps --format "{{.Names}}" | grep -q "^$container_name\$"
+        podman start $container_name > /dev/null 2>&1
+    end
+    echo "📊 Size of container (no host dirs)"
+    echo "--------------------------------------------------------"
+    podman exec -u root -it $container_name sh -c "du -ahd1 / --exclude=/home --exclude=/run --exclude=/proc --exclude=/sys --exclude=/dev 2>/dev/null | sort -h"
+    
+    echo "--------------------------------------------------------"
+    echo -n "📦 size of container: "
+    podman ps -as --format "{{.Names}}: {{.Size}}" | grep "^$container_name:" | cut -d':' -f2
+end
+
+function s
+    set container_name "alpine-temporary"
+    if podman ps -a --format "{{.Names}}" | grep -q "^$container_name\$"
+        podman rm -f $container_name > /dev/null 2>&1
+    end
+    if test (count $argv) -gt 0
+        set package $argv[1]
+        
+        if type -q xhost
+            xhost +local: > /dev/null 2>&1
+            xhost +local:root > /dev/null 2>&1
+        end
+        podman create -it --name $container_name \
+            --net=host \
+            --device /dev/dri \
+            --device /dev/snd \
+            -v "$HOME:$HOME" \
+            -v "$XDG_RUNTIME_DIR:$XDG_RUNTIME_DIR" \
+            -v /var/run/dbus/system_bus_socket:/var/run/dbus/system_bus_socket \
+            -w "$PWD" \
+            -e LANG=$LANG \
+            -e WAYLAND_DISPLAY=$WAYLAND_DISPLAY \
+            -e XDG_RUNTIME_DIR=$XDG_RUNTIME_DIR \
+            -e DBUS_SESSION_BUS_ADDRESS=$DBUS_SESSION_BUS_ADDRESS \
+            -e GSETTINGS_BACKEND=keyfile \
+            alpine:latest tail -f /dev/null > /dev/null 2>&1
+        podman start $container_name > /dev/null 2>&1
+        podman exec -u root -it $container_name sh -c "
+            echo 'https://dl-cdn.alpinelinux.org/alpine/edge/testing' >> /etc/apk/repositories && \
+            apk update > /dev/null 2>&1 && \
+            apk add --no-cache hicolor-icon-theme $package > /dev/null 2>&1
+        "
+        podman exec -it \
+            -e LANG=$LANG \
+            -e WAYLAND_DISPLAY=$WAYLAND_DISPLAY \
+            -e XDG_RUNTIME_DIR=$XDG_RUNTIME_DIR \
+            -e DBUS_SESSION_BUS_ADDRESS=$DBUS_SESSION_BUS_ADDRESS \
+            -e GSETTINGS_BACKEND=keyfile \
+            -e HOME=$HOME \
+            $container_name $package
+
+        podman rm -f $container_name > /dev/null 2>&1
+    else
+        echo ":)"
+        podman run --rm -it \
+            --userns=keep-id \
+            --net=host \
+            --device /dev/dri \
+            --device /dev/snd \
+            -v "$HOME:$HOME" \
+            -v "$XDG_RUNTIME_DIR:$XDG_RUNTIME_DIR" \
+            -v /var/run/dbus/system_bus_socket:/var/run/dbus/system_bus_socket \
+            -w "$PWD" \
+            -e LANG=$LANG \
+            -e WAYLAND_DISPLAY=$WAYLAND_DISPLAY \
+            -e XDG_RUNTIME_DIR=$XDG_RUNTIME_DIR \
+            -e DBUS_SESSION_BUS_ADDRESS=$DBUS_SESSION_BUS_ADDRESS \
+            -e GSETTINGS_BACKEND=keyfile \
+            alpine:latest sh
+    end
+end
+
+function y
+    set container_name "arch-permanent"
+    if not podman ps -a --format "{{.Names}}" | grep -q "^$container_name\$"
+        podman create -it --name $container_name \
+            --userns=keep-id \
+            --net=host \
+            --device /dev/dri \
+            --device /dev/snd \
+            -v "$HOME:$HOME" \
+            -v "$XDG_RUNTIME_DIR:$XDG_RUNTIME_DIR" \
+            -v /var/run/dbus/system_bus_socket:/var/run/dbus/system_bus_socket \
+            -w "$PWD" \
+            -e LANG=$LANG \
+            -e WAYLAND_DISPLAY=$WAYLAND_DISPLAY \
+            -e XDG_RUNTIME_DIR=$XDG_RUNTIME_DIR \
+            -e DBUS_SESSION_BUS_ADDRESS=$DBUS_SESSION_BUS_ADDRESS \
+            -e GSETTINGS_BACKEND=keyfile \
+            archlinux:latest bash > /dev/null 2>&1
+    end
+    if type -q xhost
+        xhost +local: > /dev/null 2>&1
+    end
+    if test (count $argv) -gt 0
+        set package $argv[1]
+        if not podman ps --format "{{.Names}}" | grep -q "^$container_name\$"
+            podman start $container_name > /dev/null 2>&1
+        end
+        podman exec -u root -it $container_name sh -c "pacman -Sy --noconfirm $package" > /dev/null 2>&1
+        podman exec -it \
+            -e LANG=$LANG \
+            -e WAYLAND_DISPLAY=$WAYLAND_DISPLAY \
+            -e XDG_RUNTIME_DIR=$XDG_RUNTIME_DIR \
+            -e DBUS_SESSION_BUS_ADDRESS=$DBUS_SESSION_BUS_ADDRESS \
+            -e GSETTINGS_BACKEND=keyfile \
+            $container_name $package
+    else
+        echo ":)"
+        podman start -ai $container_name
+    end
+end
+
 function w
   flatpak run com.interversehq.qView $argv
 end
