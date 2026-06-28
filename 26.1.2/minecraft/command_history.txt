@@ -1,7 +1,3 @@
-/ffl
-/fl
-/msg PxnkyVanes huh
-/boop technomancer55
 /fl
 /boop pxnkyvanes
 /swaplobby 1
@@ -46,3 +42,9 @@
 /fl
 /stuck
 /hub
+/swaplobby 1
+/fl
+/boop pxnkyvanes
+/chat a
+/w1sinternal 1
+/swaplobby 1

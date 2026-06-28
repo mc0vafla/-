@@ -18,7 +18,7 @@
   "boundary": true,
   "boundaryFormat": "&8[&r$&8]",
   "boundaryColor": "#55FFFF",
-  "chatlog": false,
+  "chatlog": true,
   "chatlogSaveInterval": 0,
   "name": true,
   "nameFormat": "<$>",
