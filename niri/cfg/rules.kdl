@@ -49,7 +49,7 @@ window-rule {
     match app-id="app.zen_browser.zen"
     default-column-width { proportion 0.9; }
     open-on-workspace "secm"
-    opacity 0.95
+    opacity 1.0
 }
 window-rule {
     match app-id="spotify"

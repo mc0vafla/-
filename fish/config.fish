@@ -8,6 +8,15 @@ zoxide init fish | source
 set -gx SPICETIFY_INSTALL "/home/helminth/.spicetify"
 fish_add_path $SPICETIFY_INSTALL
 
+
+function mm 
+    if test (count $argv) -gt 0
+        nvim $argv -c "lua vim.schedule(function() vim.cmd('Telescope find_files') end)"
+    else
+        nvim -c "lua vim.defer_fn(function() vim.cmd('Telescope find_files') end, 10)"
+    end
+end
+
 function jj
     set container_name "alpine-permanent"
     if not podman ps -a --format "{{.Names}}" | grep -q "^$container_name\$"
