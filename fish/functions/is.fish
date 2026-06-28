@@ -1,3 +1,3 @@
-function is --wraps='apk search' --description 'alias is=apk search'
-    apk search $argv
+function is --wraps='apk search; flatpak search' --description 'alias is=apk search; flatpak search'
+    apk search; flatpak search $argv
 end
