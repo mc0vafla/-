@@ -20,51 +20,41 @@
     {
       "type": "os",
       "key": "󱄅 OS",
-      "keyColor": "cyan"
+      "keyColor": "blue"
     },
     {
       "type": "host",
       "key": "󰌢 Host",
-      "keyColor": "cyan"
+      "keyColor": "blue"
     },
     {
       "type": "kernel",
       "key": "󰅚 Kernel",
-      "keyColor": "cyan"
+      "keyColor": "blue"
     },
     {
       "type": "uptime",
       "key": "󰅐 Uptime",
-      "keyColor": "cyan"
+      "keyColor": "blue"
     },
     {
       "type": "packages",
       "key": "󰏖 Packages",
-      "keyColor": "cyan"
+      "keyColor": "blue"
     },
     {
       "type": "shell",
       "key": "󱆃 Shell",
-      "keyColor": "cyan"
+      "keyColor": "bright_red"
     },
     {
       "type": "display",
       "key": "󰍹 Display",
-      "keyColor": "cyan"
-    },
-    {
-      "type": "de",
-      "key": "󰇄 DE",
       "keyColor": "bright_red"
     },
     {
       "type": "wm",
       "key": "󱂬 WM",
-      "keyColor": "bright_red"
-    },
-    {
-      "type": "wmtheme",
-      "key": "󰉼 WM Theme",
       "keyColor": "bright_red"
     },
     {
@@ -90,7 +80,7 @@
     {
       "type": "swap",
       "key": "󰓡 Swap",
-      "keyColor": "magenta"
+      "keyColor": "#FF69B4"
     },
     {
       "type": "disk",

@@ -173,7 +173,7 @@ end
 
 function fish_prompt
     set -l last_status $status
-    set -l cyan (set_color cyan)
+    set -l blue (set_color blue)
     set -l magenta (set_color magenta)
     set -l terracotta (set_color brred)
     set -l normal (set_color normal)
@@ -183,15 +183,15 @@ function fish_prompt
     else
         set prompt_status "$terracotta❯$normal"
     end
-    echo -n -s "$magenta"$USER" "$cyan(prompt_pwd)" "$prompt_status" "
+    echo -n -s "$magenta"$USER" "$blue(prompt_pwd)" "$prompt_status" "
 end
 
 function fish_right_prompt
     set -l last_status $status
-    set -l cyan (set_color cyan)
+    set -l blue (set_color blue)
     set -l normal (set_color normal)
     if fish_git_prompt > /dev/null
-        echo -n -s "$cyan"(fish_git_prompt)"$normal"
+        echo -n -s "$blue"(fish_git_prompt)"$normal"
     end
 end
 
