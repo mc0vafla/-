@@ -174,6 +174,27 @@ verbs: [
         set_working_dir: true
         leave_broot: false
     }
+    {
+        key: ctrl-k
+        execution: ":line_up"
+    }
+    {
+        key: ctrl-j
+        execution: ":line_down"
+    }
+    {
+        key: ctrl-u
+        execution: ":page_up"
+    }
+    {
+        key: ctrl-d
+        execution: ":page_down"
+    }
+    {
+       key: ctrl-i
+       invocation: "rm"
+       leave_broot: false
+    }
 
 ]
 
