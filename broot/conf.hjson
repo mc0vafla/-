@@ -34,7 +34,6 @@ date_time_format: %Y/%m/%d %R
 # Modal mode
 #
 # modal: true
-# initial_mode: command
 
 ###############################################################
 # Whether to mark the selected line with a triangle
@@ -49,7 +48,7 @@ show_selection_mark: true
 ###############################################################
 # True Colors
 #
-# true_colors: false
+true_colors: true
 
 ###############################################################
 # Icons
