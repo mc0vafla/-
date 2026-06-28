@@ -32,7 +32,6 @@ function jj
     podman ps -as --format "{{.Names}}: {{.Size}}" | grep "^$container_name:" | cut -d':' -f2
 end
 
-
 function j
     set container_name "alpine-permanent"
     if not podman ps -a --format "{{.Names}}" | grep -q "^$container_name\$"
