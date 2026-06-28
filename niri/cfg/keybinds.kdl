@@ -18,6 +18,7 @@ binds {
     Mod+Shift+P                         { spawn-sh "flatpak run io.github.ebkr.r2modman"; }
     Alt+V                               { spawn-sh "noctalia msg dock-toggle"; }
     Alt+C                               { spawn-sh "playerctl play-pause spotify"; }
+    Mod+I                               { spawn-sh "alacritty -e fish -c cute"; }
     
 
     // ─── Window Movement and Focus ───
