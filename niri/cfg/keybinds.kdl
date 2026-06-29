@@ -20,6 +20,7 @@ binds {
     Alt+C                               { spawn-sh "playerctl play-pause spotify"; }
     Mod+I                               { spawn-sh "alacritty -e fish -c cute"; }
     Mod+H                               { spawn-sh "flatpak run com.github.PintaProject.Pinta"; }
+    Mod+K                               { spawn-sh "alacritty -e fish -c o"; }
     
 
     // ─── Window Movement and Focus ───
