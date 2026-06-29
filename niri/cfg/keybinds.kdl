@@ -22,7 +22,8 @@ binds {
     Mod+K                               { spawn-sh "alacritty -e fish -c o"; }
     Alt+G                               { spawn-sh "alacritty -e fish -c ff"; }
     Mod+J                               { spawn-sh "alacritty -e fish -c lll"; }
-
+    Mod+U                               { spawn-sh "alacritty -e fish -c pw"; }
+    
     // ─── Window Movement and Focus ───
     Mod+Q                               { close-window; }
     Mod+A                               { focus-column-left; }
