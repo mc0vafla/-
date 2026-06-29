@@ -21,7 +21,8 @@ binds {
     Mod+I                               { spawn-sh "alacritty -e fish -c cute"; }
     Mod+H                               { spawn-sh "flatpak run com.github.PintaProject.Pinta"; }
     Mod+K                               { spawn-sh "alacritty -e fish -c o"; }
-    
+    Alt+G                               { spawn-sh "alacritty -e fish -c ff"; }
+
 
     // ─── Window Movement and Focus ───
     Mod+Q                               { close-window; }

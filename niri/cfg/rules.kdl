@@ -38,7 +38,7 @@ window-rule {
 window-rule {
     match app-id="org.prismlauncher.PrismLauncher"
     default-column-width { proportion 0.4; }
-    open-on-workspace "if"
+    // open-on-workspace "if"
 }
 window-rule {
     match app-id="chromium"
