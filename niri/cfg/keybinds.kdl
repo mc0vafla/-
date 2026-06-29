@@ -16,7 +16,7 @@ binds {
     Mod+B                               { spawn-sh "alacritty -e fish -c b"; }
     Mod+Shift+P                         { spawn-sh "flatpak run io.github.ebkr.r2modman"; }
     Alt+V                               { spawn-sh "noctalia msg dock-toggle"; }
-    Alt+C                               { spawn-sh "playerctl play-pause spotify"; }
+    Alt+C                               { spawn-sh "playerctl play-pause"; }
     Mod+I                               { spawn-sh "alacritty -e fish -c cute"; }
     Mod+H                               { spawn-sh "flatpak run com.github.PintaProject.Pinta"; }
     Mod+K                               { spawn-sh "alacritty -e fish -c o"; }
@@ -83,9 +83,9 @@ binds {
     Mod+ESCAPE                          { spawn-sh "nautilus"; }
     Alt+D                               { spawn-sh "noctalia msg panel-open wallpaper"; }
     Alt+A                               { focus-workspace 100; }
-    Alt+X                               { spawn-sh "playerctl next spotify"; }
-    Alt+Z                               { spawn-sh "playerctl previous spotify"; }
+    Alt+X                               { spawn-sh "playerctl next"; }
+    Alt+Z                               { spawn-sh "playerctl previous"; }
     Alt+R                               { spawn-sh "showtime"; }
-    Alt+K                               { spawn-sh "playerctl volume 0.1+ spotify"; }
-    Alt+J                               { spawn-sh "playerctl volume 0.1- spotify"; }
+    Alt+K                               { spawn-sh "playerctl volume 0.1+"; }
+    Alt+J                               { spawn-sh "playerctl volume 0.1-"; }
 }
