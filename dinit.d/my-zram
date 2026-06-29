@@ -1,3 +1,0 @@
-type = scripted
-command = /home/helminth/.local/bin/zram-start.sh
-stop-command = doas swapoff /dev/zram0

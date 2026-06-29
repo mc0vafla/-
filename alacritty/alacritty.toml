@@ -46,4 +46,4 @@ cyan    = "#6BCED8"
 white   = "#DCDFE4"
 
 [terminal]
-shell = { program = "/usr/local/bin/fish", args = ["-l"] }
+shell = "fish"

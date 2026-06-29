@@ -8,6 +8,33 @@ zoxide init fish | source
 set -gx SPICETIFY_INSTALL "/home/helminth/.spicetify"
 fish_add_path $SPICETIFY_INSTALL
 
+function snap-create
+    set -l name "root-(date +%Y-%m-%d_%H-%M-%S)"
+    set -l target_name (test -n "$argv[1]"; and echo $argv[1]; or echo $name)
+    doas btrfs subvolume snapshot -r /mnt/@ "/mnt/@snapshots/$target_name"
+end
+
+function snap-list
+    doas btrfs subvolume list /mnt/@snapshots
+end
+
+function snap-delete
+    if test -z "$argv[1]"
+        echo "Укажите имя снимка для удаления."
+        return 1
+    end
+    doas btrfs subvolume delete "/mnt/@snapshots/$argv[1]"
+end
+
+function snap-rollback
+    if test -z "$argv[1]"
+        echo "Укажите имя снимка для отката."
+        return 1
+    end
+    doas mv /mnt/@ /mnt/@broken
+    doas btrfs subvolume snapshot "/mnt/@snapshots/$argv[1]" /mnt/@
+    echo "Снимок $argv[1] развернут в @. Перезагрузитесь для применения."
+end
 
 function mm 
     if test (count $argv) -gt 0

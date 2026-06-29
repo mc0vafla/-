@@ -1,7 +1,7 @@
 binds {
     // ─── Applications ───
     Alt+TAB                             { spawn-sh "alacritty -e fish -c q"; }
-    Alt+ESCAPE                          { spawn-sh "flatpak run org.prismlauncher.PrismLauncher"; }
+    Alt+ESCAPE                          { spawn-sh "prismlauncher"; }
     Mod+Shift+O                         { spawn-sh "flatpak run io.github.Faugus.faugus-launcher"; }
     Mod+O                               { spawn-sh "flatpak run com.heroicgameslauncher.hgl"; }
     Mod+P                               { spawn-sh "flatpak run com.valvesoftware.Steam"; }

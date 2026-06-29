@@ -1,2 +1,0 @@
-type = process
-command = /usr/bin/doas /usr/bin/wpa_supplicant -i wlo1 -c /etc/wpa_supplicant/wpa_supplicant.conf
