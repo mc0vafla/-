@@ -1,3 +1,3 @@
-function e --wraps='lsblk -f' --description 'alias e=lsblk -f'
-    lsblk -f $argv
+function e --wraps='lsblk -f' --wraps=lsblk --description 'alias e=lsblk'
+    lsblk $argv
 end
