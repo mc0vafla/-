@@ -1,5 +1,4 @@
 binds {
-
     // ─── Applications ───
     Alt+TAB                             { spawn-sh "alacritty -e fish -c q"; }
     Alt+ESCAPE                          { spawn-sh "flatpak run org.prismlauncher.PrismLauncher"; }
@@ -22,7 +21,6 @@ binds {
     Mod+H                               { spawn-sh "flatpak run com.github.PintaProject.Pinta"; }
     Mod+K                               { spawn-sh "alacritty -e fish -c o"; }
     Alt+G                               { spawn-sh "alacritty -e fish -c ff"; }
-
 
     // ─── Window Movement and Focus ───
     Mod+Q                               { close-window; }
@@ -72,9 +70,7 @@ binds {
     ALT+2                               { screenshot-screen show-pointer=false; }        
     ALT+3                               { screenshot-window show-pointer=false; }
 
-
     // ─── Things ───
-
     Mod+Shift+ESCAPE                    { quit; }
     Mod+TAB                             repeat=false { toggle-overview; }
     Ctrl+Alt+P                          { spawn "fish" "-c" "321"; }
