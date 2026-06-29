@@ -1,4 +1,5 @@
 spawn-at-startup "xwayland-satellite"
+spawn-sh-at-startup "rtkitctl --start"
 spawn-sh-at-startup "brightnessctl set 100%"
 spawn-at-startup "noctalia"
 spawn-sh-at-startup "/usr/libexec/xdg-desktop-portal -r &"
