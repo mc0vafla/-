@@ -1,0 +1,21 @@
+filename = 'RawInputBuffer-1.1.1.jar'
+name = 'Raw Input Buffer'
+side = 'client'
+x-prismlauncher-loaders = [ 'fabric' ]
+x-prismlauncher-mc-versions = [ '26.1', '26.1.1', '26.1.2' ]
+x-prismlauncher-release-type = 'release'
+x-prismlauncher-version-number = '1.1.1'
+
+[download]
+hash = 'a26ca3e3b964c90f5dddbf60a74b5e4980f2f02b2583c0ed0d7c7d3ef34a5ab7f6f4081d5a1f1eccaea9c4ec915e709660bc3786e7b6d3202dfe55cd497f186b'
+hash-format = 'sha512'
+mode = 'url'
+url = 'https://cdn.modrinth.com/data/jtbWrw3s/versions/13soU5KV/RawInputBuffer-1.1.1.jar'
+
+[update.modrinth]
+mod-id = 'jtbWrw3s'
+version = '13soU5KV'
+
+[[x-prismlauncher-dependencies]]
+addonId = '7P86n6Vg'
+type = 'REQUIRED'

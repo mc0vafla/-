@@ -58,7 +58,7 @@ sprintWindow:7
 darkMojangStudiosBackground:false
 hideLightningFlashes:false
 hideSplashTexts:false
-mouseSensitivity:0.6565892752347416
+mouseSensitivity:0.6549295774647887
 damageTiltStrength:1.0
 highContrast:false
 highContrastBlockOutline:false
