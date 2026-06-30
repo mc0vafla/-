@@ -2,10 +2,10 @@
 <actions>
 <action>
 	<icon>AdobeMediaEncoder</icon>
-	<name>monokaipro</name>
+	<name>Monokaipro</name>
 	<submenu></submenu>
 	<unique-id>1782839404474906-1</unique-id>
-	<command>/home/helminth/Desktop/tintmonokaipro.sh %f</command>
+	<command>/home/helminth/.local/bin/tintmonokaipro.sh %f</command>
 	<description></description>
 	<range>*</range>
 	<patterns>*</patterns>
@@ -13,10 +13,10 @@
 </action>
 <action>
 	<icon></icon>
-	<name>mount</name>
+	<name>Mount</name>
 	<submenu></submenu>
 	<unique-id>1782839932586852-1</unique-id>
-	<command>alacritty -e fish -c a</command>
+	<command>fish -c a</command>
 	<description></description>
 	<range>*</range>
 	<patterns>*</patterns>
@@ -24,10 +24,10 @@
 </action>
 <action>
 	<icon></icon>
-	<name>unmount</name>
+	<name>Unmount</name>
 	<submenu></submenu>
 	<unique-id>1782840082900025-2</unique-id>
-	<command>alacritty -e fish -c aa</command>
+	<command>fish -c aa</command>
 	<description></description>
 	<range>*</range>
 	<patterns>*</patterns>
