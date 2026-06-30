@@ -1,3 +1,6 @@
-2026/06/29-18:45:48.328 5 Reusing MANIFEST /home/helminth/.config/chromium/Default/Local Storage/leveldb/MANIFEST-000001
-2026/06/29-18:45:48.331 5 Recovering log #89
-2026/06/29-18:45:48.331 5 Reusing old log /home/helminth/.config/chromium/Default/Local Storage/leveldb/000089.log 
+2026/06/29-18:51:11.235 5 Reusing MANIFEST /home/helminth/.config/chromium/Default/Local Storage/leveldb/MANIFEST-000001
+2026/06/29-18:51:11.238 5 Recovering log #89
+2026/06/29-18:51:11.239 5 Reusing old log /home/helminth/.config/chromium/Default/Local Storage/leveldb/000089.log 
+2026/06/29-19:06:02.999 7 Level-0 table #93: started
+2026/06/29-19:06:03.001 7 Level-0 table #93: 36289 bytes OK
+2026/06/29-19:06:03.004 7 Delete type=0 #89

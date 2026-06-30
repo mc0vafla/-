@@ -48,18 +48,12 @@ window-rule {
 window-rule {
     match at-startup=true app-id="app.zen_browser.zen"
     default-column-width { proportion 0.9; }
-    open-on-workspace "secm"
+    open-on-workspace "if"
     opacity 1.0
 }
 window-rule {
     match app-id="app.zen_browser.zen"
     opacity 1.0
-}
-window-rule {
-    match app-id="spotify"
-    default-column-width { proportion 0.9; }
-    open-on-workspace "if"
-    opacity 0.9
 }
 window-rule {
     match title="java"
