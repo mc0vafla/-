@@ -77,7 +77,7 @@ binds {
     Mod+TAB                             repeat=false { toggle-overview; }
     Ctrl+Alt+P                          { spawn "fish" "-c" "321"; }
     Ctrl+Alt+O                          { spawn "fish" "-c" "123"; }
-    Alt+Shift+TAB                       { spawn-sh ""; }
+    Alt+Shift+TAB                       { spawn-sh "wl-copy ❤"; }
   	Mod+Space                           { switch-layout "next"; }
 
     // ─── Additionals ───
