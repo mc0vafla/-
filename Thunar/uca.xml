@@ -12,4 +12,15 @@
 	<startup-notify/>
 	<directories/>
 </action>
+<action>
+	<icon>AdobeMediaEncoder</icon>
+	<name>monokaipro</name>
+	<submenu>heh</submenu>
+	<unique-id>1782839404474906-1</unique-id>
+	<command>/home/helminth/Desktop/tintmonokaipro.sh %f</command>
+	<description></description>
+	<range>*</range>
+	<patterns>*</patterns>
+	<image-files/>
+</action>
 </actions>
