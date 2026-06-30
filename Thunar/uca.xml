@@ -1,26 +1,36 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <actions>
 <action>
-	<icon>utilities-terminal</icon>
-	<name>Open Terminal Here</name>
-	<submenu></submenu>
-	<unique-id>1782838600164936-1</unique-id>
-	<command>exo-open --working-directory %f --launch TerminalEmulator</command>
-	<description>Example for a custom action</description>
-	<range></range>
-	<patterns>*</patterns>
-	<startup-notify/>
-	<directories/>
-</action>
-<action>
 	<icon>AdobeMediaEncoder</icon>
 	<name>monokaipro</name>
-	<submenu>heh</submenu>
+	<submenu></submenu>
 	<unique-id>1782839404474906-1</unique-id>
 	<command>/home/helminth/Desktop/tintmonokaipro.sh %f</command>
 	<description></description>
 	<range>*</range>
 	<patterns>*</patterns>
 	<image-files/>
+</action>
+<action>
+	<icon></icon>
+	<name>mount</name>
+	<submenu></submenu>
+	<unique-id>1782839932586852-1</unique-id>
+	<command>alacritty -e fish -c a</command>
+	<description></description>
+	<range>*</range>
+	<patterns>*</patterns>
+	<directories/>
+</action>
+<action>
+	<icon></icon>
+	<name>unmount</name>
+	<submenu></submenu>
+	<unique-id>1782840082900025-2</unique-id>
+	<command>alacritty -e fish -c aa</command>
+	<description></description>
+	<range>*</range>
+	<patterns>*</patterns>
+	<directories/>
 </action>
 </actions>

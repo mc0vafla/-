@@ -15,7 +15,7 @@
     <value type="string" value="computer:///"/>
     <value type="string" value="recent:///"/>
   </property>
-  <property name="misc-thumbnail-draw-frames" type="bool" value="true"/>
+  <property name="misc-thumbnail-draw-frames" type="bool" value="false"/>
   <property name="misc-thumbnail-mode" type="string" value="THUNAR_THUMBNAIL_MODE_ALWAYS"/>
   <property name="last-show-hidden" type="bool" value="true"/>
   <property name="misc-use-csd" type="bool" value="true"/>
