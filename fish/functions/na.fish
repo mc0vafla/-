@@ -1,3 +1,3 @@
-function na --wraps='nautilus .' --description 'alias na=nautilus .'
-    nautilus . $argv
+function na --wraps='thunar .' --description 'alias na=thunar .'
+    thunar . $argv
 end

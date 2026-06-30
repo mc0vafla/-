@@ -18,6 +18,7 @@ image/svg+xml=com.interversehq.qView.desktop
 inode/directory=thunar.desktop
 x-scheme-handler/file=alacritty-fm.desktop
 text/plain=nvim-alacritty.desktop
+video/mp4=mpv.desktop
 
 [Added Associations]
 x-scheme-handler/http=firefox.desktop;
@@ -39,3 +40,4 @@ image/svg+xml=com.interversehq.qView.desktop;
 inode/directory=alacritty.desktop;thunar.desktop;
 x-scheme-handler/file=alacritty.desktop;
 text/plain=alacritty-fm.desktop;
+video/mp4=mpv.desktop;
