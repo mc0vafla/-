@@ -82,7 +82,7 @@ binds {
 
     // ─── Additionals ───
     Alt+S                               { spawn-sh "file-roller"; }
-    Mod+ESCAPE                          { spawn-sh "nautilus"; }
+    Mod+ESCAPE                          { spawn-sh "thunar"; }
     Alt+D                               { spawn-sh "noctalia msg panel-open wallpaper"; }
     Alt+A                               { focus-workspace 100; }
     Alt+X                               { spawn-sh "playerctl next"; }
