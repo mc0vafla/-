@@ -56,7 +56,7 @@ window-rule {
     opacity 1.0
 }
 window-rule {
-    match title="java"
+    match app-id="java"
     open-floating false
     default-column-width { proportion 1.0; }
     open-fullscreen true
