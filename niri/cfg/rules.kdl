@@ -77,6 +77,6 @@ window-rule {
     default-column-width { proportion 0.9; }
 }
 window-rule {
-    match app-id="com.interversehq.qView"
+    match app-id="imv"
     open-floating true
 }
