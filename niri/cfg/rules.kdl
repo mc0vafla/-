@@ -38,7 +38,7 @@ window-rule {
 window-rule {
     match app-id="org.prismlauncher.PrismLauncher"
     default-column-width { proportion 0.4; }
-    // open-on-workspace "if"
+    open-on-workspace "if"
 }
 window-rule {
     match app-id="chromium"
@@ -46,13 +46,9 @@ window-rule {
     opacity 1.0
 }
 window-rule {
-    match at-startup=true app-id="app.zen_browser.zen"
+    match app-id="app.zen_browser.zen"
     default-column-width { proportion 0.9; }
     open-on-workspace "if"
-    opacity 1.0
-}
-window-rule {
-    match app-id="app.zen_browser.zen"
     opacity 1.0
 }
 window-rule {
