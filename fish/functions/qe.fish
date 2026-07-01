@@ -1,3 +1,3 @@
-function qe --wraps=x --description 'alias qe=x'
-    x $argv
+function qe --wraps=x --wraps=ncdu --description 'alias qe=ncdu'
+    ncdu $argv
 end

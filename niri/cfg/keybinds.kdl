@@ -23,6 +23,7 @@ binds {
     Alt+G                               { spawn-sh "alacritty -e fish -c ff"; }
     Mod+J                               { spawn-sh "alacritty -e fish -c lll"; }
     Mod+U                               { spawn-sh "alacritty -e fish -c pw"; }
+    Alt+E                               { spawn-sh "noctalia msg panel-open clipboard"; }
     
     // ─── Window Movement and Focus ───
     Mod+Q                               { close-window; }
