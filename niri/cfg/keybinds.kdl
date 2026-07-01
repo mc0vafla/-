@@ -6,7 +6,7 @@ binds {
     Mod+O                               { spawn-sh "flatpak run com.heroicgameslauncher.hgl"; }
     Mod+P                               { spawn-sh "flatpak run com.valvesoftware.Steam"; }
     Mod+Return                          { spawn "alacritty"; }
-    Mod+Shift+Return                    { spawn "alacritty"; }
+    Mod+Shift+Return                    { spawn "kitty"; }
     Mod+V                               { spawn-sh "noctalia msg panel-open launcher"; }
     Mod+C                               { spawn-sh "chromium"; }
     Mod+X                               { spawn-sh "flatpak run app.zen_browser.zen"; }

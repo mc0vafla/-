@@ -1,3 +1,3 @@
-function del --wraps='doas apk del --allow-untrusted' --description 'alias del=doas apk del --allow-untrusted'
-    doas apk del --allow-untrusted $argv
+function del --description 'alias del=doas apk del'
+    doas apk del $argv
 end
