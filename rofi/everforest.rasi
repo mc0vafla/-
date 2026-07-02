@@ -1,0 +1,96 @@
+configuration {
+    show-icons:      true;
+    display-window:  "󱂬 ";
+    display-drun:    "󰀻";
+    display-combi:   "󰕰";
+    window-format:   "{t}";
+}
+
+* {
+    bg0:        #2b3339;
+    bg1:        #323c41;
+    bg-sel:     #a7c080;
+    fg0:        #d3c6aa;
+    fg-sel:     #2b3339;
+    accent:     #83c092;
+
+    background-color: transparent;
+    text-color:       @fg0;
+    font:             "JetBrainsMono NF 11";
+}
+
+window {
+    background-color: @bg0;
+    border-radius:    12px;
+    width:            650px;
+    height:           420px;
+    padding:          25px;
+    border:           0px;
+}
+
+mainbox {
+    children: [ inputbar, listview ];
+}
+
+inputbar {
+    margin:           0px 0px 25px 0px;
+    children:         [ prompt, entry ];
+    background-color: @bg1;
+    border-radius:    8px;
+    padding:          10px 14px;
+}
+
+prompt {
+    text-color:       @accent;
+    margin:           0px 10px 0px 0px;
+}
+
+entry {
+    placeholder:      "Search...";
+    placeholder-color: #ffffff33;
+    text-color:       @fg0;
+}
+
+listview {
+    columns:      4;
+    lines:        3;
+    cycle:        true;
+    dynamic:      true;
+    layout:       vertical;
+    spacing:      15px;
+    fixed-height: false;
+}
+
+element {
+    orientation:      vertical;
+    padding:          18px 10px;
+    border-radius:    8px;
+    text-color:       @fg0;
+}
+
+element-icon {
+    size:             48px;
+    horizontal-align: 0.5;
+    margin:           0px 0px 8px 0px;
+}
+
+element-text {
+    horizontal-align: 0.5;
+    font:             "JetBrainsMono NF 10";
+    text-color:       inherit;
+}
+
+element selected {
+    background-color: @bg-sel;
+    text-color:       @fg-sel;
+}
+
+element selected element-icon {
+    background-color: transparent;
+    text-color:       @fg-sel;
+}
+
+element selected element-text {
+    background-color: transparent;
+    text-color:       @fg-sel;
+}

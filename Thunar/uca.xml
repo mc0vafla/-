@@ -1,0 +1,36 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<actions>
+<action>
+	<icon></icon>
+	<name>Mount</name>
+	<submenu></submenu>
+	<unique-id>1783013828585355-1</unique-id>
+	<command>fish -c a</command>
+	<description></description>
+	<range>*</range>
+	<patterns>*</patterns>
+	<directories/>
+</action>
+<action>
+	<icon></icon>
+	<name>Umount</name>
+	<submenu></submenu>
+	<unique-id>1783013840320960-2</unique-id>
+	<command>fish -c aa</command>
+	<description></description>
+	<range>*</range>
+	<patterns>*</patterns>
+	<directories/>
+</action>
+<action>
+	<icon></icon>
+	<name>Color</name>
+	<submenu></submenu>
+	<unique-id>1783018630035047-1</unique-id>
+	<command>tint --theme everforest-dark --image %F</command>
+	<description></description>
+	<range>*</range>
+	<patterns>*</patterns>
+	<image-files/>
+</action>
+</actions>

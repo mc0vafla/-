@@ -1,0 +1,8 @@
+#!/bin/sh
+
+case $BLOCK_BUTTON in
+    4) amixer -q sset Master 5%+ ;; 
+    5) amixer -q sset Master 5%- ;;
+esac
+
+amixer sget Master | grep -oE '[0-9]{1,3}%' | head -n1

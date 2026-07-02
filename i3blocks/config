@@ -1,0 +1,25 @@
+[dmenu]
+full_text=  
+command=dmenu_run
+color=#e67e80
+
+[memory]
+command=free -h | awk '/Mem:/ {print $3 "/" $2}'
+interval=5
+color=#a7c080
+
+[volume]
+command=~/.config/i3blocks/scripts/volume
+interval=1
+signal=1
+color=#d3c6aa
+
+[layout]
+command=sleep 0.2; setxkbmap -query | grep layout | awk '{print $2}' | cut -d',' -f$(($(xset -q | grep "LED mask" | awk '{print ($10 == "00000000" ? 1 : 2)}')))
+interval=repeat
+color=#dbbc7f
+
+[clock]
+command=date '+%H:%M:%S'
+interval=1
+color=#d3c6aa

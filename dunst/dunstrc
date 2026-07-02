@@ -1,0 +1,65 @@
+[global]
+    ### Отображение и геометрия ###
+    monitor = 0
+    follow = mouse
+    width = 350
+    height = 300
+    origin = top-right
+    offset = 12x12
+    scale = 1
+    notification_limit = 5
+
+    ### Прогресс-бары (например, громкость) ###
+    progress_bar = true
+    progress_bar_height = 8
+    progress_bar_frame_width = 1
+    progress_bar_min_width = 150
+    progress_bar_max_width = 300
+
+    ### Внешний вид ###
+    font = DepartureMono Nerd Font 10
+    frame_width = 2
+    separator_height = 2
+    padding = 12
+    horizontal_padding = 12
+    text_icon_padding = 10
+    corner_radius = 6
+    
+    # Линия между уведомлениями
+    separator_color = frame
+
+    ### Логика ###
+    sort = yes
+    idle_threshold = 120
+    alignment = left
+    show_age_threshold = 60
+    ellipsize = middle
+    ignore_newline = no
+    stack_duplicates = true
+    hide_duplicate_count = false
+    show_indicators = yes
+
+    ### Иконки ###
+    icon_position = left
+    min_icon_size = 32
+    max_icon_size = 64
+
+    ### Цвета Everforest для разных уровней важности ###
+
+[urgency_low]
+    background = "#2b3339"
+    foreground = "#859289"
+    frame_color = "#4b565c"
+    timeout = 4
+
+[urgency_normal]
+    background = "#2b3339"
+    foreground = "#d3c6aa"
+    frame_color = "#a7c080" # Оливковая рамка для обычных
+    timeout = 6
+
+[urgency_critical]
+    background = "#2b3339"
+    foreground = "#e67e80" # Красный текст
+    frame_color = "#e67e80" # Терракотовая рамка для важных
+    timeout = 0

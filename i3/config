@@ -1,0 +1,169 @@
+set $mod Mod4
+set $alt Mod1
+
+font pango:"DepartureMono Nerd Font" 8
+
+exec_always --no-startup-id sleep 1 && xrdb -merge ~/.Xresources
+exec_always --no-startup-id sleep 2 && xsetroot -cursor_name left_ptrexec brightnessctl set 100%
+exec --no-startup-id dunst
+exec brightnessctl set 100%
+exec feh --no-xinerama --bg-fill ~/Pictures/Wallpapers/1.jpg
+exec --no-startup-id xrandr --output eDP-1 --mode 1920x1080 --rate 165.00 --primary --output HDMI-1 --mode 1920x1080 --rate 75.00 --right-of eDP-1
+exec --no-startup-id dex --autostart --environment i3
+exec --no-startup-id picom
+exec --no-startup-id nm-applet
+exec --no-startup-id xss-lock --transfer-sleep-lock -- i3lock --nofork
+
+exec --no-startup-id setxkbmap -layout "us,ru" -option "grp:win_space_toggle"
+
+exec --no-startup-id flatpak run org.telegram.desktop
+exec --no-startup-id flatpak run dev.vencord.Vesktop
+exec --no-startup-id flatpak run com.spotify.Client
+exec --no-startup-id flatpak run app.zen_browser.zen
+
+bindsym XF86AudioRaiseVolume exec "amixer set Master 5%+ && pkill -RTMIN+1 i3blocks"
+bindsym XF86AudioLowerVolume exec "amixer set Master 5%- && pkill -RTMIN+1 i3blocks"
+bindsym XF86AudioMute        exec "amixer set Master toggle && pkill -RTMIN+1 i3blocks"
+
+floating_modifier $mod
+tiling_drag modifier titlebar
+bindsym $mod+Return exec alacritty
+bindsym $mod+q kill
+bindsym $mod+v exec --no-startup-id i3-dmenu-desktop --dmenu="dmenu -i -nb '#2b3339' -nf '#d3c6aa' -sb '#a7c080' -sf '#2b3339' -fn 'DepartureMono Nerd Font'"
+bindsym $mod+c exec chromium
+bindsym $mod+x exec flatpak run app.zen_browser.zen
+bindsym $mod+b exec alacritty -e fish -c b
+bindsym $mod+k exec alacritty -e fish -c o
+bindsym $mod+i exec --no-startup-id alacritty --class tenki -e fish -c cute
+bindsym $mod+o exec --no-startup-id alacritty --class cava -e fish -c cava
+bindsym $alt+Escape exec prismlauncher
+bindsym $alt+1 exec --no-startup-id sh -c "maim -s | xclip -selection clipboard -t image/png && notify-send 'Maim' 'Screenshot been copied' -i screenshot"
+bindsym $alt+2 exec --no-startup-id sh -c "maim | xclip -selection clipboard -t image/png && notify-send 'Maim' 'Screenshot been copied' -i screenshot"
+bindsym $alt+3 exec --no-startup-id sh -c "maim -i \$(xdotool getactivewindow) | xclip -selection clipboard -t image/png && notify-send 'Maim' 'Screenshot been copied' -i screenshot"
+bindsym $mod+a focus left
+bindsym $mod+d focus right
+bindsym $mod+Shift+a focus left
+bindsym $mod+Shift+d focus right
+bindsym $mod+Shift+w focus up
+bindsym $mod+Shift+s focus down
+bindsym $alt+w resize shrink width 10 px or 10 ppt
+bindsym $alt+q resize grow width 10 px or 10 ppt
+bindsym $mod+u exec alacritty -e fish -c pw
+bindsym $alt+z exec playerctl previous spotify
+bindsym $alt+x exec playerctl next spotify
+bindsym $alt+c exec playerctl play-pause spotify
+bindsym $alt+d exec playerctl volume 0.1+ spotify
+bindsym $alt+a exec playerctl volume 0.1- spotify
+bindsym $mod+Tab exec --no-startup-id rofi -show window -theme ~/.config/rofi/everforest.rasi
+bindsym --whole-window $mod+button4 workspace prev
+bindsym --whole-window $mod+button5 workspace next
+
+bindsym $mod+Ctrl+a move left
+bindsym $mod+Ctrl+d move right
+bindsym $alt+h split v
+bindsym $alt+j split h
+
+bindsym $mod+f fullscreen toggle
+bindsym $mod+z floating toggle
+
+bindsym $mod+t layout stacking
+bindsym $mod+r layout tabbed
+bindsym $mod+e layout toggle split
+
+set $ws1 "1"
+set $ws2 "2"
+set $ws3 "3"
+set $ws4 "4"
+set $ws5 "5"
+set $ws6 "6"
+set $ws7 "7"
+set $ws8 "8"
+set $ws9 "9"
+set $ws10 "10"
+
+workspace $ws1 output eDP-1
+workspace $ws2 output HDMI-1
+workspace $ws3 output HDMI-1
+workspace $ws4 output HDMI-1
+workspace $ws5 output HDMI-1
+workspace $ws6 output HDMI-1
+workspace $ws7 output HDMI-1
+workspace $ws8 output HDMI-1
+workspace $ws9 output HDMI-1
+workspace $ws10 output HDMI-1
+
+assign [class="Chromium-browser"] $ws1
+assign [class="TelegramDesktop"] $ws3
+assign [class="vesktop"] $ws3
+assign [class="(?i)spotify"] 4
+# assign [class="(?i)steam"] $ws2
+assign [class="(?i)zen"] $ws1
+
+bindsym $mod+Escape exec thunar
+
+bindsym $mod+1 workspace number $ws1
+bindsym $mod+2 workspace number $ws2
+bindsym $mod+3 workspace number $ws3
+bindsym $mod+4 workspace number $ws4
+bindsym $mod+5 workspace number $ws5
+bindsym $mod+6 workspace number $ws6
+bindsym $mod+7 workspace number $ws7
+bindsym $mod+8 workspace number $ws8
+bindsym $mod+9 workspace number $ws9
+bindsym $mod+0 workspace number $ws10
+
+bindsym $mod+Ctrl+1 move container to workspace number $ws1; workspace number $ws1
+bindsym $mod+Ctrl+2 move container to workspace number $ws2; workspace number $ws2
+bindsym $mod+Ctrl+3 move container to workspace number $ws3; workspace number $ws3
+bindsym $mod+Ctrl+4 move container to workspace number $ws4; workspace number $ws4
+bindsym $mod+Ctrl+5 move container to workspace number $ws5; workspace number $ws5
+bindsym $mod+Ctrl+6 move container to workspace number $ws6; workspace number $ws6
+bindsym $mod+Ctrl+7 move container to workspace number $ws7; workspace number $ws7
+bindsym $mod+Ctrl+8 move container to workspace number $ws8; workspace number $ws8
+bindsym $mod+Ctrl+9 move container to workspace number $ws9; workspace number $ws9
+bindsym $mod+Ctrl+0 move container to workspace number $ws10; workspace number $ws10
+
+bindsym $mod+Shift+c reload
+bindsym $mod+Shift+r restart
+bindsym $mod+Shift+q exec "pkill i3"
+
+bar {
+    output "HDMI-1"
+    font pango:"DepartureMono Nerd Font" 8
+    separator_symbol " "
+    bindsym $mod+button4 workspace next
+    bindsym $mod+button5 workspace prev
+    colors {
+        background #2b3339
+        statusline #d3c6aa
+        separator  #5c6a72
+        #                  border  bg      text
+        focused_workspace  #dbbc7f #dbbc7f #2b3339
+        active_workspace   #2b3339 #2b3339 #d3c6aa
+        inactive_workspace #2b3339 #2b3339 #5c6a72
+    }
+    status_command i3blocks
+}
+
+hide_edge_borders smart
+default_border pixel 2
+gaps inner 8
+gaps outer 0
+smart_gaps off
+
+#                       border  bg      text    indicator child_border
+client.focused          #a7c080 #a7c080 #2b3339 #a7c080   #a7c080
+client.focused_inactive #343f44 #343f44 #859289 #343f44   #343f44
+client.unfocused        #2b3339 #2b3339 #859289 #2b3339   #2b3339
+client.urgent           #e67e80 #e67e80 #2b3339 #e67e80   #e67e80
+
+for_window [class="imv"] floating enable
+for_window [class="mpv"] floating enable
+for_window [class="java"] floating enable
+for_window [class="tenki"] floating enable
+for_window [class="cava"] floating enable
+
+bindsym $mod+w workspace next
+bindsym $mod+s workspace prev
+bindsym $mod+Ctrl+w move container to workspace next; workspace next
+bindsym $mod+Ctrl+s move container to workspace prev; workspace prev

@@ -1,0 +1,216 @@
+###############################################################
+# This configuration file lets you
+# - define new commands
+# - change the shortcut or triggering keys of built-in verbs
+# - change the colors
+# - set default values for flags
+# - set special behaviors on specific paths
+# - and more...
+#
+# Configuration documentation is available at
+#     https://dystroy.org/broot
+#
+# This file's format is Hjson ( https://hjson.github.io/ ). Some
+# properties are commented out. To enable them, remove the `#`.
+#
+###############################################################
+show_status_line: false
+###############################################################
+# Default flags
+#
+# default_flags:
+
+###############################################################
+# Terminal's title
+#
+terminal_title: "[broot] {git-name}"
+
+###############################################################
+# Date/Time format
+#
+date_time_format: %Y/%m/%d %R
+
+###############################################################
+# Modal mode
+#
+# modal: true
+
+###############################################################
+# Whether to mark the selected line with a triangle
+#
+show_selection_mark: true
+
+###############################################################
+# Column order
+#
+# cols_order: [ ... ]
+
+###############################################################
+# True Colors
+#
+true_colors: true
+
+###############################################################
+# Icons
+icon_theme: nerdfonts
+
+###############################################################
+# Special paths
+#
+special_paths: {
+    "~/.local" : {
+      show: "always"
+      list: "always"
+      sum: "never"
+    }
+    "~/.var" : {
+      show: "always"
+      list: "always"
+      sum: "never"
+    }
+    "/media" : {
+        list: "never"
+        sum: "never"
+    }
+    "~/.config": { "show": "always" }
+    "trav": {
+        show: always
+        list: "always",
+        sum: "never"
+    }
+}
+
+###############################################################
+# Quit on last cancel
+# 
+# quit_on_last_cancel: true
+
+###############################################################
+# Search modes
+#
+# search_modes: {
+#     <empty>: fuzzy name
+#     /: regex name
+# }
+
+###############################################################
+# File Extension Colors
+#
+# ext_colors: { ... }
+
+###############################################################
+# Max file size for content search
+content_search_max_file_size: 10MB
+
+###############################################################
+# Max Panels Count
+# max_panels_count: 2
+
+###############################################################
+# Update work dir
+#
+update_work_dir: true
+
+###############################################################
+# Kitty Keyboard extension
+enable_kitty_keyboard: false
+
+###############################################################
+# lines around matching line in filtered preview
+lines_before_match_in_preview: 1
+lines_after_match_in_preview: 1
+
+###############################################################
+# transformations before preview
+preview_transformers: [ ]
+
+###############################################################
+# Цветовая схема (Палитра Murata / Логотип)
+skin: {
+    # Текст по умолчанию (Кремовый/Бежевый)
+    default: "#d3c6aa none"
+
+    # Дерево и структура
+    tree: "#4d5657 none"
+
+    # Обычные файлы и папки
+    file: "#d3c6aa none"
+    directory: "#7fbbb3 none bold"
+    
+    # Выбранная строка (Текст на фоне)
+    selected_line: "#e6e2cc #3d484d"
+    
+    # Даты, размеры и права — в приглушенный серо-зеленый
+    dates: "#859289 none"
+    size: "#859289 none"
+    permissions: "#859289 none"
+    
+    # Поисковый инпут и совпадения (Терракотово-красный)
+    input: "#d3c6aa none"
+    char_match: "#e67e80 none bold"
+
+    # Дополнительные элементы
+    git_status: "#dbbc7f none"
+    flag_label: "#7fbbb3 none"
+    flag_value: "#dbbc7f none"
+    status_normal: "#d3c6aa #2d353b"
+}
+
+###############################################################
+# Кастомное поведение клавиш (Горячие клавиши)
+#
+verbs: [
+    {
+        invocation: edit
+        key: enter
+        shortcut: e
+        apply_to: "file"
+        execution: "nvim {file}"
+        leave_broot: false
+    }
+    {
+        name: "enter_dir"
+        key: enter
+        mime_filter: "directory"
+        internal: "focus"
+    }
+    {
+        key: ctrl-x
+        apply_to: "file"
+        internal: "open_stay"
+    }
+    {
+        invocation: terminal
+        key: ctrl-d
+        execution: "$SHELL"
+        set_working_dir: true
+        leave_broot: false
+    }
+    {
+        key: ctrl-k
+        execution: ":line_up"
+    }
+    {
+        key: ctrl-j
+        execution: ":line_down"
+    }
+    {
+        key: ctrl-u
+        execution: ":page_up"
+    }
+    {
+        key: ctrl-d
+        execution: ":page_down"
+    }
+    {
+        key: alt-g
+        execution: ":toggle_git_status"
+    }
+]
+
+###############################################################
+# Imports
+#
+imports: [
+    verbs.hjson
+]

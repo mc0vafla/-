@@ -1,0 +1,49 @@
+[window.padding]
+x = 12
+y = 12
+
+[font]
+size = 12.0
+
+[font.normal]
+family = "DepartureMono Nerd Font"
+style = "Regular"
+
+[font.bold]
+family = "DepartureMono Nerd Font"
+style = "Bold"
+
+[font.italic]
+family = "DepartureMono Nerd Font"
+style = "Italic"
+
+[colors.primary]
+background = "#2b3339"
+foreground = "#d3c6aa"
+
+[colors.cursor]
+text = "CellBackground"
+cursor = "#d3c6aa"
+
+[colors.normal]
+black   = "#4b565c"
+red     = "#e67e80"
+green   = "#a7c080"
+yellow  = "#dbbc7f"
+blue    = "#7fbbb3"
+magenta = "#d699b6"
+cyan    = "#83c092"
+white   = "#d3c6aa"
+
+[colors.bright]
+black   = "#5c6a72"
+red     = "#e67e80"
+green   = "#a7c080"
+yellow  = "#dbbc7f"
+blue    = "#7fbbb3"
+magenta = "#d699b6"
+cyan    = "#83c092"
+white   = "#e6e2cc"
+
+[terminal]
+shell = "fish"
