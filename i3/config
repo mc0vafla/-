@@ -44,8 +44,8 @@ bindsym $mod+a focus left
 bindsym $mod+d focus right
 bindsym $mod+Shift+a focus left
 bindsym $mod+Shift+d focus right
-bindsym $mod+Shift+w focus up
-bindsym $mod+Shift+s focus down
+bindsym $mod+w focus up
+bindsym $mod+s focus down
 bindsym $alt+w resize shrink width 10 px or 10 ppt
 bindsym $alt+q resize grow width 10 px or 10 ppt
 bindsym $mod+u exec alacritty -e fish -c pw
@@ -60,6 +60,8 @@ bindsym --whole-window $mod+button5 workspace next
 
 bindsym $mod+Ctrl+a move left
 bindsym $mod+Ctrl+d move right
+bindsym $mod+Ctrl+s move down
+bindsym $mod+Ctrl+w move up
 bindsym $mod+r split v
 bindsym $mod+e split h
 
@@ -163,7 +165,9 @@ for_window [class="mpv"] floating enable
 for_window [class="tenki"] floating enable
 for_window [class="cava"] floating enable
 
-bindsym $mod+w workspace next
-bindsym $mod+s workspace prev
-bindsym $mod+Ctrl+w move container to workspace next; workspace next
-bindsym $mod+Ctrl+s move container to workspace prev; workspace prev
+# bindsym $mod+w workspace next
+# bindsym $mod+s workspace prev
+bindsym $alt+Tab workspace next
+bindsym $alt+Shift+ISO_Left_Tab workspace prev
+bindsym $alt+Ctrl+ISO_Left_Tab move container to workspace next; workspace next
+bindsym $alt+Ctrl+Shift+ISO_Left_Tab move container to workspace prev; workspace prev
