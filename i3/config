@@ -60,15 +60,15 @@ bindsym --whole-window $mod+button5 workspace next
 
 bindsym $mod+Ctrl+a move left
 bindsym $mod+Ctrl+d move right
-bindsym $alt+h split v
-bindsym $alt+j split h
+bindsym $mod+r split v
+bindsym $mod+e split h
 
 bindsym $mod+f fullscreen toggle
 bindsym $mod+z floating toggle
 
-bindsym $mod+t layout stacking
-bindsym $mod+r layout tabbed
-bindsym $mod+e layout toggle split
+# bindsym $mod+t layout stacking
+# bindsym $mod+r layout tabbed
+# bindsym $mod+e layout toggle split
 
 set $ws1 "1"
 set $ws2 "2"
