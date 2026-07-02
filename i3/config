@@ -30,8 +30,8 @@ tiling_drag modifier titlebar
 bindsym $mod+Return exec alacritty
 bindsym $mod+q kill
 bindsym $mod+v exec --no-startup-id i3-dmenu-desktop --dmenu="dmenu -i -nb '#2b3339' -nf '#d3c6aa' -sb '#a7c080' -sf '#2b3339' -fn 'DepartureMono Nerd Font'"
-bindsym $mod+c exec chromium
-bindsym $mod+x exec flatpak run app.zen_browser.zen
+bindsym $alt+e exec chromium
+bindsym $alt+s exec flatpak run app.zen_browser.zen
 bindsym $mod+b exec alacritty -e fish -c b
 bindsym $mod+k exec alacritty -e fish -c o
 bindsym $mod+i exec --no-startup-id alacritty --class tenki -e fish -c cute
@@ -167,7 +167,7 @@ for_window [class="cava"] floating enable
 
 # bindsym $mod+w workspace next
 # bindsym $mod+s workspace prev
-bindsym $alt+Tab workspace next
-bindsym $alt+Shift+ISO_Left_Tab workspace prev
-bindsym $alt+Ctrl+ISO_Left_Tab move container to workspace next; workspace next
-bindsym $alt+Ctrl+Shift+ISO_Left_Tab move container to workspace prev; workspace prev
+bindsym $mod+c workspace next
+bindsym $mod+x workspace prev
+bindsym $mod+Ctrl+c move container to workspace next; workspace next
+bindsym $mod+Ctrl+x move container to workspace prev; workspace prev
