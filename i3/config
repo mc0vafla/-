@@ -98,6 +98,7 @@ assign [class="vesktop"] $ws3
 assign [class="(?i)spotify"] 4
 # assign [class="(?i)steam"] $ws2
 assign [class="(?i)zen"] $ws1
+for_window [class="(?i)java" title="(?i)minecraft"] move container to workspace $ws2
 
 bindsym $mod+Escape exec thunar
 
@@ -159,7 +160,6 @@ client.urgent           #e67e80 #e67e80 #2b3339 #e67e80   #e67e80
 
 for_window [class="imv"] floating enable
 for_window [class="mpv"] floating enable
-for_window [class="java"] floating enable
 for_window [class="tenki"] floating enable
 for_window [class="cava"] floating enable
 
